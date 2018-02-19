@@ -10,7 +10,6 @@ import styles from "./details.less";
 export class Details extends Component {
 	render() {
 		const { build } = this.props;
-    console.log('build = ', build)
 
 		return (
 			<div className={styles.info}>
