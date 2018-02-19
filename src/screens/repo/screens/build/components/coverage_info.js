@@ -25,6 +25,8 @@ export class CoverageInfo extends Component {
   }
 
   componentDidMount() {
+    const proc = this.procWithCoverage()
+    if (!proc) return
 		client.getLogs(
       this.owner(),
       this.repo(),
