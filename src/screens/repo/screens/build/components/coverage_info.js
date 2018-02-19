@@ -48,8 +48,8 @@ export class CoverageInfo extends Component {
   }
 
 	render() {
-    const url = this.coverageUrl()
     if (!this.procWithCoverage()) return null
+    const url = this.coverageUrl()
     return <a target='_newtab' className={ style.root } href={ url }>Coverage { this.state.coveragePercent }</a>
   }
 }
