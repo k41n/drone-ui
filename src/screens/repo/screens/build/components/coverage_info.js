@@ -46,7 +46,7 @@ export class CoverageInfo extends Component {
   coverageUrl() {
     const { build } = this.props
     const proc = this.procWithCoverage()
-    return `http://ci2.redminecrm.com/builds/${build.number}/${proc.environ['PLUGIN']}/${proc.environ['DB']}/${proc.environ['RUBY_VER']}/${proc.environ['REDMINE']}/index.html`
+    return `http://ci2.redminecrm.com/builds/${build.number}/${this.repo()}/${proc.environ['DB']}/${proc.environ['RUBY_VER']}/${proc.environ['REDMINE']}/index.html`
   }
 
 	render() {
