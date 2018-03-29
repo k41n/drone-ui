@@ -40,6 +40,7 @@ export class CoverageInfo extends Component {
 
   procWithCoverage() {
     const procs = this.props.build.procs
+    if (!procs) return null
     return procs.find( (p) => (p.environ['COVERAGE_EXPORT']) )
   }
 
